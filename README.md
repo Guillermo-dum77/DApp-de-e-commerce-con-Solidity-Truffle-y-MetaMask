@@ -12,7 +12,7 @@ Una aplicación descentralizada (DApp) de e-commerce que permite añadir y compr
 - TailwindCSS
 - HTML + JavaScript
 
-## ⚙️ Instalación y ejecución local
+## Instalación y ejecución local
 
 ### 1. Clona este repositorio
 git clone https://github.com/Guillermo-dum77/DApp-de-e-commerce-con-Solidity-Truffle-y-MetaMask.git
@@ -38,11 +38,11 @@ Conéctate a la red local (http://127.0.0.1:8545 con Chain ID 1337).
 
 Haz clic en “Conectar Wallet” desde la DApp.
 
-✨ Funcionalidades
-✅ Conexión automática a MetaMask
+Funcionalidades
+Conexión automática a MetaMask
 
-➕ Añadir productos con nombre y precio en ETH
+Añadir productos con nombre y precio en ETH
 
-📦 Visualizar productos disponibles
+Visualizar productos disponibles
 
-🛒 Comprar productos (interactuando con el contrato)
+Comprar productos (interactuando con el contrato)
