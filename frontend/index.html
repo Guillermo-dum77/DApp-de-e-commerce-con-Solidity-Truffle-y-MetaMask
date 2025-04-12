@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Trade DApp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-black text-white min-h-screen">
+
+  <!-- Sticky Header -->
+  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/10 py-4">
+    <div class="max-w-4xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold flex items-center gap-2">
+        <i data-lucide="shopping-cart"></i>
+        E-Trade DApp
+      </h1>
+      <button id="connect" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded transition-all duration-300">
+        🔗 Conectar Wallet
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <!-- Add Product Section -->
+    <section class="bg-white text-gray-800 p-6 rounded-lg shadow mb-10">
+      <h2 class="text-xl font-semibold mb-4 flex items-center gap-2">
+        <i data-lucide="plus-circle"></i>
+        Añadir Producto
+      </h2>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <input type="text" id="name" placeholder="Nombre del producto"
+               class="border border-gray-300 rounded px-3 py-2 w-full" />
+        <input type="number" id="price" placeholder="Precio en ETH"
+               class="border border-gray-300 rounded px-3 py-2 w-full sm:w-40" />
+        <button id="add" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded transition-all duration-300">
+          Añadir
+        </button>
+      </div>
+    </section>
+
+    <!-- Product List -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4 flex items-center gap-2">
+        <i data-lucide="box"></i>
+        Productos
+      </h2>
+      <div id="product-list" class="grid grid-cols-1 sm:grid-cols-2 gap-6"></div>
+    </section>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed top-4 right-4 hidden bg-green-500 text-white px-4 py-2 rounded shadow-lg z-50">
+    Notificación
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  <script type="module" src="app.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
