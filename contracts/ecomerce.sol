@@ -26,7 +26,7 @@ contract ECommerce {
     function buyProduct(uint _id) public payable {
         Product storage product = products[_id];
         require(_id > 0 && _id <= productCount, "Producto no existe");
-        require(msg.value == product.price, "Monto incorrecto");
+	    require(msg.value >= product.price, "Fondos insuficientes");
         require(!product.sold, "Producto ya vendido");
 
         product.seller.transfer(msg.value);
